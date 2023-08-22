@@ -19,6 +19,7 @@ console.log(sum(2, 6)); должно вывести число 8 в консол
 */
 
 const number1 = Number.parseFloat(prompt("Введите число"));
+const action = prompt('Выберите действие +, -, *, /')
 const number2 = Number.parseFloat(prompt("Введите число"));
 
 const summaNumber = (a, b) => a + b;
@@ -32,24 +33,38 @@ const differenceNumber = (a, b) => {
 const multiplicationNumber = (a, b) => a * b;
 const divisionNumber = (a, b) => a / b;
 
-console.log(
-    `Сумма чисел ${number1} и ${number2} равна ${summaNumber(number1, number2)}`
-);
-console.log(
-    `Разность чисел ${number1} и ${number2} равна ${differenceNumber(
-        number1,
-        number2
-    )}`
-);
-console.log(
-    `Умножение чисел ${number1} и ${number2} равно ${multiplicationNumber(
-        number1,
-        number2
-    )}`
-);
-console.log(
-    `Деление чисел ${number1} и ${number2} равно ${divisionNumber(
-        number1,
-        number2
-    )}`
-);
+const calculat = (num1, num2) => {
+    switch (action) {
+        case '+': return summaNumber(num1, num2);
+        case '-': return differenceNumber(num1, num2);
+        case '*': return multiplicationNumber(num1, num2);
+        case '/': return divisionNumber(num1, num2);
+        default:
+            console.log('Некорректное значение');
+    }
+}
+console.log(calculat(number1, number2));
+
+
+
+// console.log(
+//     `Сумма чисел ${number1} и ${number2} равна ${summaNumber(number1, number2)}`
+// );
+// console.log(
+//     `Разность чисел ${number1} и ${number2} равна ${differenceNumber(
+//         number1,
+//         number2
+//     )}`
+// );
+// console.log(
+//     `Умножение чисел ${number1} и ${number2} равно ${multiplicationNumber(
+//         number1,
+//         number2
+//     )}`
+// );
+// console.log(
+//     `Деление чисел ${number1} и ${number2} равно ${divisionNumber(
+//         number1,
+//         number2
+//     )}`
+// );
