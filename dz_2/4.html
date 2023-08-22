@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Homework</title>
-</head>
-<body>
-<!--
+  <head>
+    <meta charset="UTF-8" />
+    <title>Homework</title>
+  </head>
+  <body>
+    <!--
 Необязательное задание.
 Если вам показалось домашнее задание простым, выполняем данный пункт.
 
@@ -27,11 +27,15 @@
 Уточнение: Пользователь всегда вводит корректное положительное целое число.
 Подсказка: Возможно, вам понадобится округление чисел и оператор %.
 -->
-<script>
-  "use strict";
+    <script>
+      "use strict";
 
-  const number = Number.parseInt(prompt('Введите целое число'));
-  alert(`В числе ${number} количество сотен: ${Math.trunc(number / 100)  % 10}, десятков: ${Math.trunc(number / 10) % 10}, единиц: ${number % 10}`);
-</script>
-</body>
+      const number = Number.parseInt(prompt("Введите целое число"));
+      alert(
+        `В числе ${number} количество сотен: ${
+          Math.trunc(number / 100) % 10
+        }, десятков: ${Math.trunc(number / 10) % 10}, единиц: ${number % 10}`
+      );
+    </script>
+  </body>
 </html>
