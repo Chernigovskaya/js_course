@@ -20,18 +20,17 @@
 -->
 <script>
   "use strict";
+
   const dayNumber = Number.parseInt(prompt('Введите целое число от 1 до 31 включительно'))
   if (dayNumber > 0 && dayNumber < 32) {
     if (dayNumber < 11) {
-      console.log(`Число ${dayNumber} попадает в 1 декаду месяца.`)
+      console.log(`Число ${dayNumber} попадает в 1 декаду месяца.`);
     }
     else if (dayNumber < 21){
-      console.log(`Число ${dayNumber} попадает в 2 декаду месяца.`)
+      console.log(`Число ${dayNumber} попадает в 2 декаду месяца.`);
+    } else {
+      console.log(`Число ${dayNumber} попадает в 3 декаду месяца.`);
     }
-    else {
-      console.log(`Число ${dayNumber} попадает в 3 декаду месяца.`)
-    }
-    
   } else {
     console.log("Неверное значение");
   }
