@@ -11,5 +11,8 @@ xxx
 xxxx
 xxxxx
 */
-
-// Здесь пишем решение, данный комментарий необходимо стереть.
+let x = "x";
+console.log(x);
+for (let i = 0; i < 20; i++) {
+  console.log((x += "x"));
+}
